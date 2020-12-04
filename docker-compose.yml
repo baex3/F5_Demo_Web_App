@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  f5webappbeta:
+    image: baex3/f5sportsappapi
+    build: 
+      context: ./sportsapp.api
+      dockerfile: Dockerfile
+      ports:
+      - 8080:80
