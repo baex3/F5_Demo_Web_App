@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eneugwu/Documents/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj": {}
+    "/var/www/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj": {}
   },
   "projects": {
-    "/Users/eneugwu/Documents/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj": {
+    "/var/www/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eneugwu/Documents/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj",
+        "projectUniqueName": "/var/www/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj",
         "projectName": "SportsApp.API",
-        "projectPath": "/Users/eneugwu/Documents/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj",
-        "packagesPath": "/Users/eneugwu/.nuget/packages/",
-        "outputPath": "/Users/eneugwu/Documents/F5_Demo_Web_App/SportsApp.API/obj/",
+        "projectPath": "/var/www/F5_Demo_Web_App/SportsApp.API/SportsApp.API.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/var/www/F5_Demo_Web_App/SportsApp.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eneugwu/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -77,6 +77,10 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
               "version": "[3.1.8, 3.1.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[3.1.9, 3.1.9]"
             }
           ],
           "frameworkReferences": {
@@ -87,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

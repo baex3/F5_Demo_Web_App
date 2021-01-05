@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using SportsApp.API.Data;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace SportsApp.API
 {
@@ -30,6 +31,11 @@ namespace SportsApp.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+	    services.Configure<ForwardedHeadersOptions>(options =>
+            {
+            		options.ForwardedHeaders =
+                	ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
             //setup database connection string from appsettings.json
             services.AddDbContext<DataContext>(lam => lam.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             //setup Controllers
@@ -55,7 +61,12 @@ namespace SportsApp.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+		app.UseForwardedHeaders();
             }
+	    else
+	    {
+	    	app.UseHsts();
+	    }
    
             // app.UseHttpsRedirection();
 
