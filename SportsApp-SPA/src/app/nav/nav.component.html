@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" id="nav_bar_title">Locker Room:</a>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="http://localhost:80">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">News Highlights</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Rulebook</a
+      >
+    </li>
+    <li class="nav-item dropdown">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle">
+          Sport
+        </a>
+      
+        <div id="sportDropdown" class="dropdown-menu">
+          <a class="dropdown-item" href="#">Soccer</a>
+          <a class="dropdown-item" href="#">Football (American)</a>
+          <a class="dropdown-item" href="#">Basketball</a>
+          <a class="dropdown-item" href="#">Formula 1 Racing</a>
+          <a class="dropdown-item" href="#">X-Games</a>
+        </div>
+      </div>
+    </li>
+    <div *ngIf="loggedIn()">
+      <li class="nav-item">
+        <a class="nav-link button" (click)="logout()" href=""><i class="fa fa-sign-out"></i>Sign Out</a>
+      </li>
+    </div>
+
+  </ul>
+
+  <div *ngIf="loggedIn()">
+  <a class="nav-msg text-light"><i class="fa fa-user" style="margin-right: 10px;"></i>Welcome, User</a>
+  </div>
+  
+
+  <form class="form-inline my-2 my-lg-0">
+    <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search (Users, Results,... etc.)"
+    />
+    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">
+      Search
+    </button>
+  </form>
+</nav>
