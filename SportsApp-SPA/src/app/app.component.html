@@ -1,0 +1,38 @@
+<div style="margin-bottom: 5%;">
+  <app-nav></app-nav>
+</div>
+
+<div style="text-align: center; align-self: auto; margin-bottom: 30px; padding: 16px;
+position:relative;
+border: solid 1px #333;
+background-color: #eee;
+min-width: 280px;">
+  
+  <style type="text/css;"> #element1 {display:inline-block;margin-right:10px;font-size: xx-large;} 
+    #element2 {display:inline-block;font-style: italic; color: white;font-weight: bold;font-size: xx-large; background-color: crimson; font-family: sans-serif; border-radius: 4px; padding: 0 7px 0;} </style>
+    <div id="element1"> Welcome to</div>
+    <div id="element2">{{title}}</div>
+  <!-- <h1 style="font-style: oblique, italic; color: crimson;">
+     {{title}}!
+  </h1> -->
+  <h3 style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">{{subtitle}}</h3>
+  <app-value></app-value>
+
+</div>
+
+<div class="home">
+  <app-home></app-home>
+</div>
+<div (registerSuccessful)="goHome($event)">
+  <div *ngIf="loggedIn() || (showHome)" class="sports" >
+    <h1 style="margin: 2%;">Super Bowl LIV : Chiefs Triumphant!</h1>
+    <img src= "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0203%2Fr661022_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg" alt="Chiefs win Super Bowl">
+</div>
+<div *ngIf="loggedIn() || (showHome)" class="sports" >
+  <h1 style="margin: 2%;">The Money Shot!</h1>
+  <img src= "http://static.nfl.com/static/content/public/pg-photo/2020/02/02/0ap3000001100928/andy-reid_pg_600.jpg" alt="Chiefs win Super Bowl">
+</div>
+</div>
+
+
+
